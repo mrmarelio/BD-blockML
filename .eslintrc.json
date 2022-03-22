@@ -1,0 +1,32 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended",
+    "react-app",
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["react", "jsx-a11y", "formatjs", "react-hooks", "prettier"],
+  "rules": {
+    "no-console": "warn",
+    "react/display-name": "warn",
+    "jsx-a11y/no-onchange": "warn",
+    "formatjs/no-offset": "error",
+    "formatjs/enforce-default-message": "error",
+    "formatjs/enforce-placeholders": "error",
+    "formatjs/no-multiple-whitespaces": "warn",
+    "require-await": "error",
+    "prettier/prettier": "error"
+  }
+}
