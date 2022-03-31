@@ -1,0 +1,25 @@
+$roboto-regular: 'roboto-regular';
+$roboto-medium: 'roboto-medium';
+$roboto-bold: 'roboto-bold';
+
+@font-face {
+  font-family: $roboto-regular;
+  src: url('../../assets/roboto-fonts/Roboto-Regular.ttf');
+}
+
+@font-face {
+  font-family: $roboto-medium;
+  src: url('../../assets/roboto-fonts/Roboto-Medium.ttf');
+}
+
+@font-face {
+  font-family: $roboto-bold;
+  src: url('../../assets/roboto-fonts/Roboto-Bold.ttf');
+}
+
+$font-roboto-regular: $roboto-regular, sans-serif;
+$font-roboto-medium: $roboto-medium, sans-serif;
+$font-roboto-bold: $roboto-bold, sans-serif;
+
+$html-font-size: 62.5%;
+$body-font-size: 1.6rem;
