@@ -1,11 +1,16 @@
 import React from "react";
 import Header from "components/header";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Routing } from "routes";
 
 const App = () => {
   return (
-    <div className="app">
-      <Header />
-    </div>
+    <Router>
+      <div className="app">
+        <Header />
+        <Routing />
+      </div>
+    </Router>
   );
 };
 
