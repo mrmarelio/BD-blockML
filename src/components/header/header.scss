@@ -1,0 +1,15 @@
+@import 'src/styles/index';
+
+.header {
+  background-color: $color-independence;
+  display: flex;
+  height: 85px;
+  justify-content: space-between;
+  width: 100%;
+
+  &__icon {
+    &__main-logo {
+      padding: 5px 5px 0;
+    }
+  }
+}
