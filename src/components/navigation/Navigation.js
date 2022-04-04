@@ -5,7 +5,7 @@ import "./navigation.scss";
 const Navigation = () => {
   const navigationItems = [
     {
-      link: "/pagrindinis",
+      link: "/",
       itemName: "Pagrindinis",
     },
     {
