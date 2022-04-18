@@ -14,7 +14,6 @@ Blockly.JavaScript["html"] = function (block) {
 
 Blockly.JavaScript["body"] = function (block) {
   var statements_content = Blockly.JavaScript.statementToCode(block, "content");
-
   var code = "<body>\n" + statements_content + "</body>\n";
   return code;
 };

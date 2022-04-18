@@ -336,7 +336,7 @@ const Dashboard = () => {
   function workspaceDidChange(workspace) {
     var code = Blockly.JavaScript.workspaceToCode(workspace);
     document.getElementById("blockly-code-preview").innerText = code;
-    document.getElementById("iframewebsite").src =
+    document.getElementById("blockly-iframe-website").src =
       "data:text/html;charset=utf-8," + encodeURIComponent(code);
     setJavascriptCode(code);
   }
@@ -365,7 +365,7 @@ const Dashboard = () => {
       <div className="dashboard__blockly-website">
         <iframe
           className="blockly-iframe-website"
-          id="iframewebsite"
+          id="blockly-iframe-website"
           title="Blockly website in iframe"
         ></iframe>
       </div>

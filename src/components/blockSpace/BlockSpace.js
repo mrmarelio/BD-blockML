@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Blockly from "blockly";
 import { BlocklyWorkspace } from "react-blockly";
+import "./ThemeMain";
 import "./BlockGenerator";
 import "./blockspace.scss";
 
@@ -17,6 +19,7 @@ const BlockSpace = ({ categories, xml, workspaceChange, xmlChange }) => {
           colour: "#ccc",
           snap: true,
         },
+        theme: Blockly.Themes.Halloween,
       }}
       onWorkspaceChange={workspaceChange}
       onXmlChange={xmlChange}
