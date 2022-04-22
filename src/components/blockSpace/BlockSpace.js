@@ -6,11 +6,11 @@ import "./ThemeMain";
 import "./BlockGenerator";
 import "./blockspace.scss";
 
-const BlockSpace = ({ categories, xml, workspaceChange, xmlChange }) => {
+const BlockSpace = ({ categories, initialXml, workspaceChange, xmlChange }) => {
   return (
     <BlocklyWorkspace
       toolboxConfiguration={categories}
-      initialXml={xml}
+      initialXml={initialXml}
       className="blockly-space"
       workspaceConfiguration={{
         grid: {
@@ -29,9 +29,9 @@ const BlockSpace = ({ categories, xml, workspaceChange, xmlChange }) => {
 
 BlockSpace.propTypes = {
   categories: PropTypes.object.isRequired,
-  xml: PropTypes.string,
+  initialXml: PropTypes.any,
   workspaceChange: PropTypes.func.isRequired,
-  xmlChange: PropTypes.string,
+  xmlChange: PropTypes.any,
 };
 
 export default BlockSpace;
