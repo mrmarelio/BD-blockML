@@ -190,7 +190,7 @@ Blockly.JavaScript["unorderedlist"] = function (block) {
     Blockly.JavaScript.ORDER_ATOMIC
   );
   var statements_content = Blockly.JavaScript.statementToCode(block, "content");
-  var code = "<ul" + value_styling + ">" + statements_content + "</ul>\n";
+  var code = "<ul" + value_styling + ">\n" + statements_content + "</ul>\n";
   return code;
 };
 
@@ -213,7 +213,7 @@ Blockly.JavaScript["listitem"] = function (block) {
     Blockly.JavaScript.ORDER_ATOMIC
   );
   var statements_content = Blockly.JavaScript.statementToCode(block, "content");
-  var code = "<li" + value_name + ">" + statements_content + "</li>\n";
+  var code = "<li" + value_name + ">" + statements_content.trim() + "</li>\n";
   return code;
 };
 

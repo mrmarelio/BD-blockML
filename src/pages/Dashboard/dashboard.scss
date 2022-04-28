@@ -1,8 +1,26 @@
 @import 'src/styles/index';
 
 .dashboard {
+  animation: GradientBackground 12s ease infinite;
+  background: linear-gradient(0.33turn, #f6a192, #ffd9df, #f6c492, #f6a192);
+  background-size: 400% 400%;
   display: flex;
   flex-direction: column;
   font-size: $dashboard-font-size;
+  height: calc(100vh - 80px);
   padding: 0 70px 0 40px;
+
+  @keyframes GradientBackground {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 }

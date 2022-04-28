@@ -1,0 +1,28 @@
+@import 'src/styles/index';
+
+.blockSpaceButton__item {
+  align-items: center;
+  background-color: $color-independence;
+  border: unset;
+  box-shadow: -1px 0 0 $color-active;
+  color: $color-lavender-web;
+  flex: 1;
+  font-family: $roboto-regular;
+  font-size: $half-font-size;
+  height: 100%;
+  letter-spacing: 0.1em;
+  line-height: 12px;
+
+  &:hover {
+    background-color: $color-hover;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: $color-active;
+
+    &:hover {
+      background-color: $color-active;
+    }
+  }
+}
