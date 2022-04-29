@@ -1,9 +1,7 @@
 @import 'src/styles/index';
 
-$color-antiquewhite: #faebd7;
-$color-aqua: #80ffd4;
-
 .sandbox {
+  @include background-animation;
   display: grid;
   gap: 6px;
   grid-template-columns: 1fr 1fr;
@@ -16,6 +14,18 @@ $color-aqua: #80ffd4;
     border-radius: 10px;
     display: flex;
     grid-column-start: span 2;
+
+    :first-child {
+      border-bottom-left-radius: 10px;
+      border-top-left-radius: 10px;
+      overflow: hidden;
+    }
+
+    :last-child {
+      border-bottom-right-radius: 10px;
+      border-top-right-radius: 10px;
+      overflow: hidden;
+    }
   }
 
   &__blockly-space {
@@ -26,13 +36,14 @@ $color-aqua: #80ffd4;
     width: 100%;
 
     .injectionDiv {
+      border: 1px solid $color-independence;
       border-radius: 10px;
     }
   }
 
   &__blockly-website-title {
     align-items: center;
-    background-color: $color-antiquewhite;
+    background-color: $color-cultured;
     border: 1px solid $color-independence;
     border-radius: 10px;
     display: flex;
@@ -42,7 +53,7 @@ $color-aqua: #80ffd4;
   }
 
   &__blockly-code-preview {
-    background-color: $color-aqua;
+    background-color: $color-cultured;
     border: 1px solid $color-independence;
     border-radius: 10px;
     font-size: $half-font-size;
@@ -61,7 +72,7 @@ $color-aqua: #80ffd4;
 }
 
 .blockly-iframe-website {
-  background-color: $color-antiquewhite;
+  background-color: $color-cultured;
   border: unset;
   border-radius: 10px;
   height: 98%;

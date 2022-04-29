@@ -19,7 +19,7 @@ const BlockSpace = ({ categories, initialXml, workspaceChange, xmlChange }) => {
           colour: "#ccc",
           snap: true,
         },
-        theme: Blockly.Themes.Halloween,
+        theme: Blockly.Themes.Main,
       }}
       onWorkspaceChange={workspaceChange}
       onXmlChange={xmlChange}

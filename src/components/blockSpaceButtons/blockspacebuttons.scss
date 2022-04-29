@@ -8,10 +8,11 @@
   color: $color-lavender-web;
   flex: 1;
   font-family: $roboto-regular;
-  font-size: $half-font-size;
+  font-size: $less-half-font-size;
   height: 100%;
   letter-spacing: 0.1em;
   line-height: 12px;
+  text-transform: uppercase;
 
   &:hover {
     background-color: $color-hover;

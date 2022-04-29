@@ -1,26 +1,24 @@
 @import 'src/styles/index';
 
 .dashboard {
-  animation: GradientBackground 12s ease infinite;
-  background: linear-gradient(0.33turn, #f6a192, #ffd9df, #f6c492, #f6a192);
-  background-size: 400% 400%;
+  @include background-animation;
+
+  color: $color-lavender-web;
   display: flex;
   flex-direction: column;
+  font-family: $font-roboto-regular;
   font-size: $dashboard-font-size;
   height: calc(100vh - 80px);
-  padding: 0 70px 0 40px;
+  justify-content: flex-start;
+  padding: 70px 130px;
 
-  @keyframes GradientBackground {
-    0% {
-      background-position: 0% 50%;
-    }
-
-    50% {
-      background-position: 100% 50%;
-    }
-
-    100% {
-      background-position: 0% 50%;
-    }
+  &__center {
+    align-items: center;
+    background-color: $color-hover;
+    border-radius: 10px;
+    box-shadow: 0 16px 38px -12px rgb(0 0 0 / 56%),
+      0 4px 25px 0 rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(0 0 0 / 20%);
+    height: 50vh;
+    padding: 20px 40px;
   }
 }

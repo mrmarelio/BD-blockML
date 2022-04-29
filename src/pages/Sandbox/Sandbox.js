@@ -31,7 +31,7 @@ const Sandbox = () => {
   function saveTextToHtml() {
     let anchorTag = document.body.appendChild(document.createElement("a"));
     let textToSave = document.getElementById("blockly-code-preview").innerText;
-    anchorTag.setAttribute("download", "downloadedWebsite");
+    anchorTag.setAttribute("download", "jusuSvetaine");
     anchorTag.setAttribute(
       "href",
       "data:text/plain;charset=utf-8," + encodeURIComponent(textToSave)

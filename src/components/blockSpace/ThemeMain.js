@@ -1,19 +1,18 @@
 import Blockly from "blockly";
 
-Blockly.Themes.Halloween = Blockly.Theme.defineTheme("halloween", {
+Blockly.Themes.Main = Blockly.Theme.defineTheme("mainTheme", {
   base: Blockly.Themes.Classic,
   componentStyles: {
-    workspaceBackgroundColour: "#1e1e1e",
-    toolboxBackgroundColour: "blackBackground",
+    workspaceBackgroundColour: "#e9ecef",
+    toolboxBackgroundColour: "#526d80",
     toolboxForegroundColour: "#fff",
-    flyoutBackgroundColour: "#252526",
+    flyoutBackgroundColour: "#7c98ac",
     flyoutForegroundColour: "#ccc",
-    flyoutOpacity: 1,
+    flyoutOpacity: 0.7,
     scrollbarColour: "#797979",
     insertionMarkerColour: "#fff",
     insertionMarkerOpacity: 0.3,
     scrollbarOpacity: 0.4,
     cursorColour: "#d0d0d0",
-    blackBackground: "#333",
   },
 });

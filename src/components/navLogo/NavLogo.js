@@ -1,5 +1,5 @@
 import React from "react";
-import BdLogo from "assets/icons/bdLogo.svg";
+import BdLogo from "assets/icons/bdLogoMain.svg";
 import { Link } from "react-router-dom";
 
 const NavLogo = () => {

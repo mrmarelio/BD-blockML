@@ -10,7 +10,7 @@ const Navigation = () => {
     },
     {
       link: "/sandbox",
-      itemName: "Sandbox",
+      itemName: "Kurti svetainę",
     },
     {
       link: "/kontaktai",
