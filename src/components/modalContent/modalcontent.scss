@@ -1,0 +1,57 @@
+@import 'src/styles/index';
+
+.modal__content {
+  background: #f1f1f1;
+  border-radius: 3px;
+  font-size: $header-font-size;
+  position: absolute;
+  white-space: pre-line;
+}
+
+.first-modal {
+  left: 50%;
+  max-width: 900px;
+  min-width: 700px;
+  top: 40%;
+  transform: translate(-50%, -50%);
+}
+
+.second-modal {
+  left: 75%;
+  max-width: 900px;
+  min-width: 700px;
+  top: 53%;
+  transform: translate(-50%, -50%);
+}
+
+.third-modal {
+  left: 50%;
+  max-width: 900px;
+  min-width: 700px;
+  top: 35%;
+  transform: translate(-50%, -50%);
+}
+
+.fourth-modal {
+  left: 25%;
+  max-width: 550px;
+  min-width: 400px;
+  top: 28%;
+  transform: translate(-50%, -50%);
+}
+
+.fifth-modal {
+  left: 25%;
+  max-width: 550px;
+  min-width: 400px;
+  top: 35%;
+  transform: translate(-50%, -50%);
+}
+
+.sixth-modal {
+  left: 25%;
+  max-width: 550px;
+  min-width: 400px;
+  top: 65%;
+  transform: translate(-50%, -50%);
+}

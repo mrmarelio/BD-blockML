@@ -2,13 +2,14 @@
 
 .contacts {
   @include background-animation;
+  align-items: center;
   color: $color-lavender-web;
   display: flex;
   flex-direction: column;
   font-size: $dashboard-font-size;
   height: calc(100vh - 80px);
   justify-content: flex-start;
-  padding: 70px 350px;
+  padding: 70px;
 
   &__center {
     align-items: center;
@@ -16,7 +17,12 @@
     border-radius: 10px;
     box-shadow: 0 16px 38px -12px rgb(0 0 0 / 56%),
       0 4px 25px 0 rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(0 0 0 / 20%);
-    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    height: 35vh;
+    justify-content: center;
+    max-width: 700px;
+    min-width: 600px;
     padding: 20px 30px;
 
     &__section {

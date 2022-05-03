@@ -23,6 +23,7 @@ $font-roboto-bold: $roboto-bold, sans-serif;
 
 $html-font-size: 62.5%;
 $body-font-size: 1.6rem;
+$modal-h4-font-size: 1.3em;
 $dashboard-font-size: 0.7em;
 $header-font-size: 0.7em;
 $half-font-size: 0.5em;
@@ -39,4 +40,10 @@ $less-half-font-size: 0.45em;
 
 .h3-font-style {
   font-weight: normal;
+}
+
+.h4-font-style {
+  font-size: $modal-h4-font-size;
+  font-weight: normal;
+  margin: 12px 0;
 }

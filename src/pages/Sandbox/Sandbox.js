@@ -3,6 +3,7 @@ import Blockly from "blockly";
 import BlockSpace from "components/blockSpace";
 import WorkspaceConfig from "components/blockSpace/WorkspaceConfig";
 import BlockSpaceButtons from "components/blockSpaceButtons";
+import SandboxHelpModal from "components/sandboxHelpModal";
 import "./sandbox.scss";
 
 const Sandbox = () => {
@@ -52,7 +53,7 @@ const Sandbox = () => {
 
   return (
     <div className="sandbox">
-      <div className="sandbox__button-wrapper">
+      <div className="sandbox__button-wrapper" id="sandbox-button-wrapper">
         <BlockSpaceButtons
           itemName="Išsaugoti svetainės kodą"
           onClick={saveTextToHtml}
@@ -61,9 +62,9 @@ const Sandbox = () => {
           itemName="Ištrinti visus blokus"
           onClick={removeCurrentBlocks}
         />
-        <BlockSpaceButtons itemName="Pagalba" />
+        <SandboxHelpModal />
       </div>
-      <div className="sandbox__blockly-space">
+      <div className="sandbox__blockly-space" id="sandbox-blockly-space">
         <BlockSpace
           categories={WorkspaceConfig.ToolboxConfig}
           initialXml={WorkspaceConfig.InitialXmlConfig}
@@ -81,12 +82,12 @@ const Sandbox = () => {
       >
         Svetainė be pavadinimo
       </div>
-      <div className="sandbox__blockly-code-preview">
+      <div className="sandbox__blockly-code-preview" id="sandbox-code-preview">
         <pre className="blockly-code-preview" id="blockly-code-preview">
           {javascriptCode}
         </pre>
       </div>
-      <div className="sandbox__blockly-website">
+      <div className="sandbox__blockly-website" id="sandbox-website">
         <iframe
           className="blockly-iframe-website"
           id="blockly-iframe-website"

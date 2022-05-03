@@ -16,7 +16,7 @@ const BlockSpace = ({ categories, initialXml, workspaceChange, xmlChange }) => {
         grid: {
           spacing: 20,
           length: 3,
-          colour: "#ccc",
+          colour: "#7c98ac",
           snap: true,
         },
         theme: Blockly.Themes.Main,

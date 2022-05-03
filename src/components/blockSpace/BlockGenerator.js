@@ -201,7 +201,7 @@ Blockly.JavaScript["orderedlist"] = function (block) {
     Blockly.JavaScript.ORDER_ATOMIC
   );
   var statements_content = Blockly.JavaScript.statementToCode(block, "content");
-  var code = "<ol" + value_styling + ">" + statements_content + "</ul>\n";
+  var code = "<ol" + value_styling + ">" + statements_content + "</ol>\n";
 
   return code;
 };

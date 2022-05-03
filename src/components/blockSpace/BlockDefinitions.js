@@ -104,7 +104,9 @@ Blockly.Blocks["style"] = {
     this.setOutput(true, "attribute");
     this.setColour(225);
     this.setTooltip("Blokas skirtas pridėti stiliams");
-    this.setHelpUrl("");
+    this.setHelpUrl(
+      "https://developer.mozilla.org/en-US/docs/Learn/CSS/First_steps"
+    );
   },
 };
 
@@ -145,8 +147,10 @@ Blockly.Blocks["generalstyle"] = {
     this.setPreviousStatement(true, "css");
     this.setNextStatement(true, "css");
     this.setColour(225);
-    this.setTooltip("Blokas skirtas įvesti savo pasirinktiem stiliams");
-    this.setHelpUrl("");
+    this.setTooltip("Blokas skirtas įvesti savo pasirinktiems stiliams");
+    this.setHelpUrl(
+      "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference#index"
+    );
   },
 };
 

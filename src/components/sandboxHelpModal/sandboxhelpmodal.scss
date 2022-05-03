@@ -1,0 +1,55 @@
+@import 'src/styles/index';
+
+$_modal-z-index: 80;
+
+.modal {
+  background: rgba(49, 49, 49, 0.7);
+  bottom: 0;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100vw;
+  z-index: $_modal-z-index;
+
+  &__content {
+    background: #f1f1f1;
+    border-radius: 3px;
+    font-size: $header-font-size;
+    padding: 15px 25px;
+    position: absolute;
+
+    &__button {
+      &--close {
+        border: 1px solid $color-independence;
+        border-radius: 10px;
+        margin-right: 12px;
+        padding: 7px 12px;
+
+        &:hover {
+          background-color: $color-active;
+          cursor: pointer;
+        }
+      }
+
+      &--next {
+        background-color: $color-independence;
+        border: unset;
+        border-radius: 10px;
+        color: $color-lavender-web;
+        padding: 7px 27px;
+
+        &:hover {
+          background-color: $color-hover;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .hidden-button {
+      pointer-events: none;
+      visibility: hidden;
+    }
+  }
+}
