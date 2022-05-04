@@ -12,14 +12,13 @@ const Dashboard = () => {
           JavaScript biblioteką &quot;Blockly&quot;.
         </h2>
         <hr></hr>
-
         <section className="dashboard__section">
           <h3 className="h3-font-style">
             Bakalauro darbo tema: <br></br> Mokomosios svetainės kūrimas taikant
             vaizdinio programavimo principus skirtos html ir css pagrindų
             mokymui
           </h3>
-          <p>Dar kazka cia parasyt</p>
+          <p>Dėstytojas: Oleg Bystrov</p>
         </section>
       </div>
     </div>

@@ -65,7 +65,7 @@ Blockly.JavaScript["division"] = function (block) {
 
 Blockly.JavaScript["style"] = function (block) {
   var statements_styling = Blockly.JavaScript.statementToCode(block, "styling");
-  var code = ' style="' + statements_styling.trim() + '"';
+  var code = ' style="' + statements_styling.trim() + ' "';
   return [code, Blockly.JavaScript.ORDER_NONE];
 };
 

@@ -8,7 +8,7 @@ import "./contacts.scss";
 const Contacts = () => (
   <div className="contacts">
     <div className="contacts__center">
-      <h2 className="h2-font-style">Kontaktinė informacija</h2>
+      <h2 className="h2-font-style-contacts">Kontaktinė informacija</h2>
       <section className="contacts__center__section">
         <PersonIcon /> <span> Marius Orentas</span>
         <EmailIcon /> <span> marius.orentas@stud.vilniustech.lt</span>
