@@ -4,6 +4,7 @@ import BlockSpace from "components/blockSpace";
 import WorkspaceConfig from "components/blockSpace/WorkspaceConfig";
 import BlockSpaceButtons from "components/blockSpaceButtons";
 import SandboxHelpModal from "components/sandboxHelpModal";
+import { motion } from "framer-motion";
 import "./sandbox.scss";
 
 const Sandbox = () => {
@@ -52,49 +53,58 @@ const Sandbox = () => {
   }
 
   return (
-    <div className="sandbox">
-      <div className="sandbox__button-wrapper" id="sandbox-button-wrapper">
-        <BlockSpaceButtons
-          itemName="Išsaugoti svetainės kodą"
-          onClick={saveTextToHtml}
-        />
-        <BlockSpaceButtons
-          itemName="Ištrinti visus blokus"
-          onClick={removeCurrentBlocks}
-        />
-        <SandboxHelpModal />
-      </div>
-      <div className="sandbox__blockly-space" id="sandbox-blockly-space">
-        <BlockSpace
-          categories={WorkspaceConfig.ToolboxConfig}
-          initialXml={WorkspaceConfig.InitialXmlConfig}
-          workspaceChange={onWorkspaceChange}
-        />
-      </div>
-      {/*
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      <div className="sandbox">
+        <div className="sandbox__button-wrapper" id="sandbox-button-wrapper">
+          <BlockSpaceButtons
+            itemName="Išsaugoti svetainės kodą"
+            onClick={saveTextToHtml}
+          />
+          <BlockSpaceButtons
+            itemName="Ištrinti visus blokus"
+            onClick={removeCurrentBlocks}
+          />
+          <SandboxHelpModal />
+        </div>
+        <div className="sandbox__blockly-space" id="sandbox-blockly-space">
+          <BlockSpace
+            categories={WorkspaceConfig.ToolboxConfig}
+            initialXml={WorkspaceConfig.InitialXmlConfig}
+            workspaceChange={onWorkspaceChange}
+          />
+        </div>
+        {/*
          //aprasyt package'us projekta, reacta pati
     //2 dalis teorine technologiju veikimas
     //3dalis taikymas siu technologiju
       */}
-      <div
-        className="sandbox__blockly-website-title"
-        id="blockly-website-title"
-      >
-        Svetainė be pavadinimo
+        <div
+          className="sandbox__blockly-website-title"
+          id="blockly-website-title"
+        >
+          Svetainė be pavadinimo
+        </div>
+        <div
+          className="sandbox__blockly-code-preview"
+          id="sandbox-code-preview"
+        >
+          <pre className="blockly-code-preview" id="blockly-code-preview">
+            {javascriptCode}
+          </pre>
+        </div>
+        <div className="sandbox__blockly-website" id="sandbox-website">
+          <iframe
+            className="blockly-iframe-website"
+            id="blockly-iframe-website"
+            title="Blockly website in iframe"
+          ></iframe>
+        </div>
       </div>
-      <div className="sandbox__blockly-code-preview" id="sandbox-code-preview">
-        <pre className="blockly-code-preview" id="blockly-code-preview">
-          {javascriptCode}
-        </pre>
-      </div>
-      <div className="sandbox__blockly-website" id="sandbox-website">
-        <iframe
-          className="blockly-iframe-website"
-          id="blockly-iframe-website"
-          title="Blockly website in iframe"
-        ></iframe>
-      </div>
-    </div>
+    </motion.div>
   );
 };
 

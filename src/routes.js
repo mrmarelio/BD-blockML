@@ -1,14 +1,21 @@
 import React from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 import Dashboard from "./pages/Dashboard";
 import Contacts from "pages/Contacts";
 import Sandbox from "pages/Sandbox";
+import NotFound from "pages/NotFound";
 
-export const Routing = () => (
-  <Routes>
-    <Route path="/" element={<Dashboard />} />
-    <Route path="/sandbox" element={<Sandbox />} />
-    <Route path="/kontaktai" element={<Contacts />} />
-    <Route path="*" element={<Navigate replace to="/" />} />
-  </Routes>
-);
+export const Routing = () => {
+  const location = useLocation();
+  return (
+    <AnimatePresence exitBeforeEnter>
+      <Routes location={location} key={location.pathname}>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/sandbox" element={<Sandbox />} />
+        <Route path="/kontaktai" element={<Contacts />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </AnimatePresence>
+  );
+};

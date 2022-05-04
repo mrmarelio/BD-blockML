@@ -1,27 +1,33 @@
 import React from "react";
-
+import { motion } from "framer-motion";
 import "./dashboard.scss";
 
 const Dashboard = () => {
   return (
-    <div className="dashboard">
-      <div className="dashboard__center">
-        <h1 className="h1-font-style">BlockML - Block Markup Language</h1>
-        <h2 className="h2-font-style">
-          Vaizdinio programavimo įrankis, skirtas kurti svetaines taikant
-          JavaScript biblioteką &quot;Blockly&quot;.
-        </h2>
-        <hr></hr>
-        <section className="dashboard__section">
-          <h3 className="h3-font-style">
-            Bakalauro darbo tema: <br></br> Mokomosios svetainės kūrimas taikant
-            vaizdinio programavimo principus skirtos html ir css pagrindų
-            mokymui
-          </h3>
-          <p>Dėstytojas: Oleg Bystrov</p>
-        </section>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+    >
+      <div className="dashboard">
+        <div className="dashboard__center">
+          <h1 className="h1-font-style">BlockML - Block Markup Language</h1>
+          <h2 className="h2-font-style">
+            Vaizdinio programavimo įrankis, skirtas kurti svetaines taikant
+            JavaScript biblioteką &quot;Blockly&quot;.
+          </h2>
+          <hr></hr>
+          <section className="dashboard__section">
+            <h3 className="h3-font-style">
+              Bakalauro darbo tema: <br></br> Mokomosios svetainės kūrimas
+              taikant vaizdinio programavimo principus skirtos html ir css
+              pagrindų mokymui
+            </h3>
+            <p>Dėstytojas: Oleg Bystrov</p>
+          </section>
+        </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
