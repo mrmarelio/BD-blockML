@@ -1,14 +1,10 @@
 import React from "react";
-import { motion } from "framer-motion";
+import PageAnimation from "components/pageAnimation/PageAnimation";
 import "./dashboard.scss";
 
 const Dashboard = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
+    <PageAnimation>
       <div className="dashboard">
         <div className="dashboard__center">
           <h1 className="h1-font-style">BlockML - Block Markup Language</h1>
@@ -27,7 +23,7 @@ const Dashboard = () => {
           </section>
         </div>
       </div>
-    </motion.div>
+    </PageAnimation>
   );
 };
 

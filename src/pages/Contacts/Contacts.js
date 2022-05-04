@@ -1,16 +1,12 @@
 import React from "react";
-import { motion } from "framer-motion";
+import PageAnimation from "components/pageAnimation/PageAnimation";
 import { ReactComponent as LocationIcon } from "assets/icons/location-icon.svg";
 import { ReactComponent as EmailIcon } from "assets/icons/email-icon.svg";
 import { ReactComponent as PersonIcon } from "assets/icons/person-icon.svg";
 import "./contacts.scss";
 
 const Contacts = () => (
-  <motion.div
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    exit={{ opacity: 0 }}
-  >
+  <PageAnimation>
     <div className="contacts">
       <div className="contacts__center">
         <h2 className="h2-font-style-contacts">Kontaktinė informacija</h2>
@@ -21,7 +17,7 @@ const Contacts = () => (
         </section>
       </div>
     </div>
-  </motion.div>
+  </PageAnimation>
 );
 
 export default Contacts;

@@ -1,19 +1,15 @@
 import React from "react";
-import { motion } from "framer-motion";
+import PageAnimation from "components/pageAnimation/PageAnimation";
 import "./notfound.scss";
 
 const NotFound = () => (
-  <motion.div
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    exit={{ opacity: 0 }}
-  >
+  <PageAnimation>
     <div className="contacts">
       <div className="contacts__center">
         <h2 className="h2-font-style">Nerastas puslapis</h2>
       </div>
     </div>
-  </motion.div>
+  </PageAnimation>
 );
 
 export default NotFound;

@@ -4,7 +4,7 @@ import BlockSpace from "components/blockSpace";
 import WorkspaceConfig from "components/blockSpace/WorkspaceConfig";
 import BlockSpaceButtons from "components/blockSpaceButtons";
 import SandboxHelpModal from "components/sandboxHelpModal";
-import { motion } from "framer-motion";
+import PageAnimation from "components/pageAnimation/PageAnimation";
 import "./sandbox.scss";
 
 const Sandbox = () => {
@@ -53,11 +53,7 @@ const Sandbox = () => {
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-    >
+    <PageAnimation>
       <div className="sandbox">
         <div className="sandbox__button-wrapper" id="sandbox-button-wrapper">
           <BlockSpaceButtons
@@ -104,7 +100,7 @@ const Sandbox = () => {
           ></iframe>
         </div>
       </div>
-    </motion.div>
+    </PageAnimation>
   );
 };
 
