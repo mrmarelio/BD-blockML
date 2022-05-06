@@ -4,7 +4,12 @@ import "./blockspacebuttons.scss";
 
 const BlockSpaceButtons = ({ itemName, onClick }) => {
   return (
-    <button className="blockSpaceButton__item" type="button" onClick={onClick}>
+    <button
+      className="blockSpaceButton__item"
+      type="button"
+      onClick={onClick}
+      data-testid="blockspaceButton"
+    >
       {itemName}
     </button>
   );
@@ -16,6 +21,7 @@ BlockSpaceButtons.propTypes = {
 };
 
 BlockSpaceButtons.defaultProps = {
+  itemName: "Mygtukas",
   onClick: () => {},
 };
 

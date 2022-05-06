@@ -19,7 +19,7 @@
   },
   "plugins": ["react", "jsx-a11y", "formatjs", "react-hooks", "prettier"],
   "rules": {
-    "no-console": "warn",
+    "no-console": 0,
     "react/display-name": "warn",
     "jsx-a11y/no-onchange": "warn",
     "formatjs/no-offset": "error",

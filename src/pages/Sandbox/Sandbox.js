@@ -36,7 +36,7 @@ const Sandbox = () => {
     anchorTag.setAttribute("download", "jusuSvetaine");
     anchorTag.setAttribute(
       "href",
-      "data:text/plain;charset=utf-8," + encodeURIComponent(textToSave)
+      "data:text/html;charset=utf-8," + encodeURIComponent(textToSave)
     );
     anchorTag.onclick = destroyClickedElement;
     anchorTag.click();
@@ -73,11 +73,6 @@ const Sandbox = () => {
             workspaceChange={onWorkspaceChange}
           />
         </div>
-        {/*
-         //aprasyt package'us projekta, reacta pati
-    //2 dalis teorine technologiju veikimas
-    //3dalis taikymas siu technologiju
-      */}
         <div
           className="sandbox__blockly-website-title"
           id="blockly-website-title"

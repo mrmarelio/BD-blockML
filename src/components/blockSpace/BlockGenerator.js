@@ -161,10 +161,16 @@ Blockly.JavaScript["strong"] = function (block) {
 
 Blockly.JavaScript["heading"] = function (block) {
   var dropdown_headinglevel = block.getFieldValue("headinglevel");
+  var value_styling = Blockly.JavaScript.valueToCode(
+    block,
+    "styling",
+    Blockly.JavaScript.ORDER_ATOMIC
+  );
   var statements_content = Blockly.JavaScript.statementToCode(block, "content");
   var code =
     "<" +
     dropdown_headinglevel +
+    value_styling +
     ">" +
     statements_content.trim() +
     "</" +

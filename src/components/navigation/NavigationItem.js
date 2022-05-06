@@ -8,6 +8,8 @@ const NavigationItem = ({ link, itemName, onClick }) => {
       <NavLink
         to={link}
         onClick={onClick}
+        data-testid="navigation"
+        id="navigation"
         className={({ isActive }) =>
           isActive
             ? "navigation__link navigation__link-active"
@@ -27,6 +29,8 @@ NavigationItem.propTypes = {
 };
 
 NavigationItem.defaultProps = {
+  link: "/",
+  itemName: "",
   onClick: () => {},
 };
 

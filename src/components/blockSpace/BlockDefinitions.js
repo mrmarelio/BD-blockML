@@ -254,7 +254,8 @@ Blockly.Blocks["strong"] = {
 
 Blockly.Blocks["heading"] = {
   init: function () {
-    this.appendDummyInput()
+    this.appendValueInput("styling")
+      .setCheck("attribute")
       .appendField("heading")
       .appendField(
         new Blockly.FieldDropdown([
@@ -267,9 +268,9 @@ Blockly.Blocks["heading"] = {
         ]),
         "headinglevel"
       );
-    this.appendStatementInput("content").setCheck(null);
-    this.setPreviousStatement(true, null);
-    this.setNextStatement(true, null);
+    this.appendStatementInput("content").setCheck("html");
+    this.setPreviousStatement(true, "html");
+    this.setNextStatement(true, "html");
     this.setColour(180);
     this.setTooltip(
       "Blokas atspindi šešis skyrių antraščių lygius nuo didžiausio iki mažiausio."
