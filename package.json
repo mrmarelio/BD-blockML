@@ -1,6 +1,7 @@
 {
   "name": "bd-main-project",
   "version": "0.1.0",
+  "homepage": "https://mrmarelio.github.io/BD-blockML",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
@@ -23,7 +24,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prepare": "husky install",
-    "lint": "npm run -s lint:prettier:check && npm run -s lint:eslint:check && npm run -s lint:stylelint:check"
+    "lint": "npm run -s lint:prettier:check && npm run -s lint:eslint:check && npm run -s lint:stylelint:check",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,json,css,scss,md}": "prettier --write",
@@ -62,6 +65,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "4.3.0",
+    "gh-pages": "^4.0.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.7",
     "prettier": "^2.6.0",
