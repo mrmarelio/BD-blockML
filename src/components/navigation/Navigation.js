@@ -5,15 +5,15 @@ import "./navigation.scss";
 const Navigation = () => {
   const navigationItems = [
     {
-      link: "/",
+      link: "/BD-blockML",
       itemName: "Pagrindinis",
     },
     {
-      link: "/sandbox",
+      link: "/BD-blockML/sandbox",
       itemName: "Kurti svetainę",
     },
     {
-      link: "/kontaktai",
+      link: "/BD-blockML/kontaktai",
       itemName: "Kontaktai",
     },
   ];
