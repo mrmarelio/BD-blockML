@@ -11,9 +11,9 @@ export const Routing = () => {
   return (
     <AnimatePresence exitBeforeEnter>
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Dashboard />} />
-        <Route path="/sandbox" element={<Sandbox />} />
-        <Route path="/kontaktai" element={<Contacts />} />
+        <Route path="/BD-blockML" element={<Dashboard />} />
+        <Route path="/BD-blockML/sandbox" element={<Sandbox />} />
+        <Route path="/BD-blockML/kontaktai" element={<Contacts />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </AnimatePresence>
