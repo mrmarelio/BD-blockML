@@ -138,6 +138,32 @@ Blockly.Blocks["backgroundcolor"] = {
   },
 };
 
+Blockly.Blocks["widthstyle"] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField("width: ")
+      .appendField(new Blockly.FieldTextInput("value"), "NAME");
+    this.setPreviousStatement(true, "css");
+    this.setNextStatement(true, "css");
+    this.setColour(225);
+    this.setTooltip("Blokas, skirtas nustatyti elemento ilgiui.");
+    this.setHelpUrl("https://developer.mozilla.org/en-US/docs/Web/CSS/width");
+  },
+};
+
+Blockly.Blocks["heightstyle"] = {
+  init: function () {
+    this.appendDummyInput()
+      .appendField("height:")
+      .appendField(new Blockly.FieldTextInput("value"), "NAME");
+    this.setPreviousStatement(true, "css");
+    this.setNextStatement(true, "css");
+    this.setColour(225);
+    this.setTooltip("Blokas, skirtas nustatyti elemento aukščiui.");
+    this.setHelpUrl("https://developer.mozilla.org/en-US/docs/Web/CSS/height");
+  },
+};
+
 Blockly.Blocks["generalstyle"] = {
   init: function () {
     this.appendDummyInput()
@@ -151,6 +177,19 @@ Blockly.Blocks["generalstyle"] = {
     this.setHelpUrl(
       "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference#index"
     );
+  },
+};
+
+Blockly.Blocks["styleonclickconnect"] = {
+  init: function () {
+    this.appendValueInput("onclick").setCheck("attribute");
+    this.appendValueInput("styling").setCheck("attribute");
+    this.setOutput(true, "attribute");
+    this.setColour(225);
+    this.setTooltip(
+      'Blokas skirtas pridėti ir stiliams, ir "onClick" komandai.'
+    );
+    this.setHelpUrl("");
   },
 };
 

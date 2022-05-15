@@ -42,7 +42,7 @@ Blockly.JavaScript["title"] = function (block) {
 
 Blockly.JavaScript["paragraph"] = function (block) {
   var statements_content = Blockly.JavaScript.statementToCode(block, "content");
-  var code = "<p>\n" + statements_content + "</p>\n";
+  var code = "<p>\n" + statements_content + "\n</p>\n";
   return code;
 };
 
@@ -81,10 +81,37 @@ Blockly.JavaScript["backgroundcolor"] = function (block) {
   return code;
 };
 
+Blockly.JavaScript["widthstyle"] = function (block) {
+  var text_name = block.getFieldValue("NAME");
+  var code = "width: " + text_name + ";";
+  return code;
+};
+
+Blockly.JavaScript["heightstyle"] = function (block) {
+  var text_name = block.getFieldValue("NAME");
+  var code = "height: " + text_name + ";";
+  return code;
+};
+
 Blockly.JavaScript["generalstyle"] = function (block) {
   var text_property = block.getFieldValue("property");
   var text_value = block.getFieldValue("value");
-  var code = text_property + ": " + text_value + ";";
+  var code = text_property + ": " + text_value + ";   ";
+  return code;
+};
+
+Blockly.JavaScript["styleonclickconnect"] = function (block) {
+  var value_onclick = Blockly.JavaScript.valueToCode(
+    block,
+    "onclick",
+    Blockly.JavaScript.ORDER_ATOMIC
+  );
+  var value_styling = Blockly.JavaScript.valueToCode(
+    block,
+    "styling",
+    Blockly.JavaScript.ORDER_ATOMIC
+  );
+  var code = value_styling + value_onclick;
   return code;
 };
 
@@ -173,7 +200,7 @@ Blockly.JavaScript["heading"] = function (block) {
     value_styling +
     ">" +
     statements_content.trim() +
-    "</" +
+    "\n</" +
     dropdown_headinglevel +
     ">\n";
   return code;

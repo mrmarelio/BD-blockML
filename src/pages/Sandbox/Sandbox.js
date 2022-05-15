@@ -8,14 +8,18 @@ import PageAnimation from "components/pageAnimation/PageAnimation";
 import "./sandbox.scss";
 
 const Sandbox = () => {
-  const [javascriptCode, setJavascriptCode] = useState("");
+  const [HtmlCode, setHtmlCode] = useState("");
+
+  const xmlStart = WorkspaceConfig.PresentationXmlConfig;
+  if (localStorage.getItem("blockly-html-code") === null)
+    localStorage.setItem("blockly-html-code", xmlStart);
 
   const onWorkspaceChange = useCallback((workspace) => {
     let code = Blockly.JavaScript.workspaceToCode(workspace);
     document.getElementById("blockly-code-preview").innerText = code;
     document.getElementById("blockly-iframe-website").src =
       "data:text/html;charset=utf-8," + encodeURIComponent(code);
-    setJavascriptCode(code);
+    setHtmlCode(code);
 
     if (typeof onWorkspaceChange.firstTime == "undefined") {
       let xmlText = localStorage.getItem("blockly-html-code");
@@ -84,7 +88,7 @@ const Sandbox = () => {
           id="sandbox-code-preview"
         >
           <pre className="blockly-code-preview" id="blockly-code-preview">
-            {javascriptCode}
+            {HtmlCode}
           </pre>
         </div>
         <div className="sandbox__blockly-website" id="sandbox-website">

@@ -17,7 +17,7 @@ const Dashboard = () => {
             <h3 className="h3-font-style">
               Bakalauro darbo tema: <br></br> Mokomosios svetainės kūrimas
               taikant vaizdinio programavimo principus skirtos html ir css
-              pagrindų mokymui
+              pagrindų mokymui.
             </h3>
             <p>Dėstytojas: Oleg Bystrov</p>
           </section>
