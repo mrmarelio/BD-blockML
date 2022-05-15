@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.307ba4c0.css",
+    "main.js": "/static/js/main.9a0afc1b.js",
+    "static/media/Roboto-Medium.ttf": "/static/media/Roboto-Medium.7429a63c09f79a1760b0.ttf",
+    "static/media/Roboto-Regular.ttf": "/static/media/Roboto-Regular.a8d6ac03c7b96b7acb62.ttf",
+    "static/media/Roboto-Bold.ttf": "/static/media/Roboto-Bold.75371f53f06181df75f1.ttf",
+    "static/media/bdLogoMain.svg": "/static/media/bdLogoMain.ee77f838e7244e641e6357b497ebadf1.svg",
+    "static/media/location-icon.svg": "/static/media/location-icon.b37f3185f72367c4e74560506f2b0128.svg",
+    "static/media/email-icon.svg": "/static/media/email-icon.66c5bc359104063dbc5875825c69cf28.svg",
+    "index.html": "/index.html",
+    "static/media/person-icon.svg": "/static/media/person-icon.77efec6522feb62b54c7aef2b99b77df.svg",
+    "main.307ba4c0.css.map": "/static/css/main.307ba4c0.css.map",
+    "main.9a0afc1b.js.map": "/static/js/main.9a0afc1b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.307ba4c0.css",
+    "static/js/main.9a0afc1b.js"
+  ]
+}
