@@ -10,7 +10,7 @@ import "./sandbox.scss";
 const Sandbox = () => {
   const [HtmlCode, setHtmlCode] = useState("");
 
-  const xmlStart = WorkspaceConfig.PresentationXmlConfig;
+  const xmlStart = WorkspaceConfig.XmlWithDocument;
   if (localStorage.getItem("blockly-html-code") === null)
     localStorage.setItem("blockly-html-code", xmlStart);
 
