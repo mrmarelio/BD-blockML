@@ -1,11 +1,17 @@
 import React from "react";
+import Header from "components/header";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Routing } from "routes";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header"></header>
-    </div>
+    <Router>
+      <div className="app">
+        <Header />
+        <Routing />
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;

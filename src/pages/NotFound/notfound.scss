@@ -1,0 +1,37 @@
+@import 'src/styles/index';
+
+.not-found {
+  @include background-animation;
+  align-items: center;
+  color: $color-lavender-web;
+  display: flex;
+  flex-direction: column;
+  font-size: $dashboard-font-size;
+  height: calc(100vh - 80px);
+  justify-content: flex-start;
+  padding: 70px;
+
+  &__center {
+    align-items: center;
+    background-color: $color-hover;
+    border-radius: 10px;
+    box-shadow: 0 16px 38px -12px rgb(0 0 0 / 56%),
+      0 4px 25px 0 rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(0 0 0 / 20%);
+    display: flex;
+    flex-direction: column;
+    height: 35vh;
+    justify-content: center;
+    max-width: 700px;
+    min-width: 600px;
+    padding: 20px 60px;
+
+    &__section {
+      align-items: center;
+      display: grid;
+      gap: 5px;
+      grid-template-columns: 0.05fr 0.95fr;
+      grid-template-rows: 1fr 1fr;
+      justify-content: center;
+    }
+  }
+}

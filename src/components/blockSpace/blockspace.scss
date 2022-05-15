@@ -1,0 +1,20 @@
+@import 'src/styles/index';
+
+.blockly-space {
+  height: 100%;
+  width: 100%;
+}
+
+.blocklyTreeLabel {
+  color: $color-lavender-web;
+}
+
+.blocklyToolboxContents {
+  padding: 0.5em;
+}
+
+.blocklyTreeRow {
+  border-radius: 8px;
+  margin-bottom: 0.2em;
+  padding: 5px 5px 30px 0;
+}

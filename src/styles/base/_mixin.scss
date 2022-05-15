@@ -1,0 +1,19 @@
+@mixin background-animation {
+  animation: GradientBackground 12s ease infinite;
+  background: linear-gradient(0.33turn, #f8f9fa, #e9ecef, #dee2e6, #f8f9fa);
+  background-size: 400% 400%;
+
+  @keyframes GradientBackground {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}

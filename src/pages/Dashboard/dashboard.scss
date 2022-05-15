@@ -1,0 +1,25 @@
+@import 'src/styles/index';
+
+.dashboard {
+  @include background-animation;
+
+  color: $color-lavender-web;
+  display: flex;
+  flex-direction: column;
+  font-family: $font-roboto-regular;
+  font-size: $dashboard-font-size;
+  height: calc(100vh - 80px);
+  justify-content: flex-start;
+  padding: 70px 130px;
+
+  &__center {
+    align-items: center;
+    background-color: $color-hover;
+    border-radius: 10px;
+    box-shadow: 0 16px 38px -12px rgb(0 0 0 / 56%),
+      0 4px 25px 0 rgb(0 0 0 / 12%), 0 8px 10px -5px rgb(0 0 0 / 20%);
+    max-height: 75vh;
+    min-height: 50vh;
+    padding: 30px 60px;
+  }
+}
